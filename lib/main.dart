@@ -33,8 +33,9 @@ class _TaiwanIdScreenState extends State<TaiwanIdScreen> {
     final input = controller.text.trim();
     if (input.isEmpty) return;
 
+
     setState(() {
-      history.add(analyzeInput(input));
+      history.add(input + ": " + analyzeInput(input));
       controller.clear();
     });
 
